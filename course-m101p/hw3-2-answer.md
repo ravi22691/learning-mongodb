@@ -33,7 +33,7 @@ Retourner 10 derniers posts:
 
         def get_posts( self, num_posts):
             # XXX HW 3.2 Work here to get the posts
-            cursor = self.posts.find().sort([( "date", DESCENDING)]).limit( num_posts)
+            cursor = self.posts.find().sort("date", direction = -1).limit( num_posts)
             …
 
 Retourner un post selon son permalink:
